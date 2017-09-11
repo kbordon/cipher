@@ -1,20 +1,27 @@
 var sentence = prompt("Enter a sentence:");
 alert(sentence);
 
+var order = function(sentence) {
+  return (sentence.charAt(0)).toUpperCase() + (sentence.charAt(sentence.length - 1)).toUpperCase();
+};
+alert("This is a redo function: " + order(sentence));
+
 var sentenceLength = sentence.length;
 
 var firstLetter = sentence.charAt(0);
 var capFirstLetter = firstLetter.toUpperCase();
 
 var newStart = sentence.replace(firstLetter, capFirstLetter);
-alert(newStart);
+//alert(newStart);
 
 var lastLetter = sentence.charAt(sentenceLength - 1);
-alert(lastLetter);
+//alert(lastLetter);
+
 
 var capLastLetter = lastLetter.toUpperCase();
-alert(capLastLetter);
+//alert(capLastLetter);
 
+//This part was due to mis-reading the assignment but was an attempt to capitalize beginning and end and replacing it back into the sentence
 //var newSentence = sentence.replace(lastLetter/$/, capLastLetter);
 //alert(newSentence);
 
@@ -39,3 +46,9 @@ var regAndReverse = function (capFirstLetter, capLastLetter) {
 };
 
 alert("This is both orders together: " + regAndReverse(capFirstLetter, capLastLetter));
+
+//This is a separate attempt at the functions
+
+//var order = function (sentence) {
+//  return (sentence.charAt(0)).toUpperCase + //((sentence.charAt(sentence.length - 1)).toUpperCase;
+//};
