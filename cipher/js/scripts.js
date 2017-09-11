@@ -15,14 +15,27 @@ alert(lastLetter);
 var capLastLetter = lastLetter.toUpperCase();
 alert(capLastLetter);
 
-var newSentence = sentence.replace(lastLetter, capLastLetter);
-alert(newSentence);
+//var newSentence = sentence.replace(lastLetter/$/, capLastLetter);
+//alert(newSentence);
 
-//var example = RegExp(lastLetter, "$&");
+//var example = RegExp(lastLetter, /$/);
 //var newSentence = sentence.replace(example, capLastLetter);
 //alert(newSentence);
 
-alert(capFirstLetter + capLastLetter); //this will capitalize first and last letter
+var letters = function (capFirstLetter, capLastLetter) {
+  return capFirstLetter + capLastLetter;
+};
 
-var revLetters = (capLastLetter + capFirstLetter);
-alert(revLetters);
+alert("These are the first and last letters: " + letters(capFirstLetter, capLastLetter)); //this will capitalize first and last letter
+
+var revLetters = function(capFirstLetter,capLastLetter){
+  return capLastLetter + capFirstLetter;
+};
+
+alert("This is the reverse order: " + revLetters(capFirstLetter, capLastLetter));
+
+var regAndReverse = function (capFirstLetter, capLastLetter) {
+  return letters(capFirstLetter, capLastLetter) + revLetters(capFirstLetter, capLastLetter);
+};
+
+alert("This is both orders together: " + regAndReverse(capFirstLetter, capLastLetter));
