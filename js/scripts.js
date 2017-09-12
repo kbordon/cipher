@@ -2,24 +2,33 @@ var sentence = prompt("Enter a sentence:");
 alert(sentence);
 
 var order = function(sentence) {
-  return (sentence.charAt(0)).toUpperCase() + (sentence.charAt(sentence.length - 1)).toUpperCase();
+  return (sentence.charAt(0)).toUpperCase() + (sentence.charAt((sentence.length) - 1)).toUpperCase();
 };
 alert("This is a redo function: " + order(sentence));
 
-var sentenceLength = sentence.length;
+var revOrder = function (letters) {
+  return letters.charAt(1) + letters.charAt(0);
+}
+alert("This is the reverse of the function: " + revOrder(order(sentence)));
 
-var firstLetter = sentence.charAt(0);
-var capFirstLetter = firstLetter.toUpperCase();
+var thirdOrder = function () {
+  alert("This is the reverse of the first and last letters: " + revOrder(order(prompt("Enter another sentence:"))));
+};
+thirdOrder();
+//this is first attempt*
+//var sentenceLength = sentence.length;
 
-var newStart = sentence.replace(firstLetter, capFirstLetter);
+//var firstLetter = sentence.charAt(0);
+
+//var newStart = sentence.replace(firstLetter, capFirstLetter);
 //alert(newStart);
 
-var lastLetter = sentence.charAt(sentenceLength - 1);
+//var lastLetter = sentence.charAt(sentenceLength - 1);
 //alert(lastLetter);
 
 
-var capLastLetter = lastLetter.toUpperCase();
-//alert(capLastLetter);
+//var capLastLetter = lastLetter.toUpperCase();
+//alert(capLastLetter);*
 
 //This part was due to mis-reading the assignment but was an attempt to capitalize beginning and end and replacing it back into the sentence
 //var newSentence = sentence.replace(lastLetter/$/, capLastLetter);
