@@ -35,13 +35,11 @@ var fourthOrder = function (sentence) {
 }
 var modifiedSentence =  fourthOrder(sentence);
 
-// This is the bonus function that reverses the final result. Not finished.
+// This is the bonus function that reverses the final result.
 
 var splitSentence = function (sentence) {
   return sentence.split("");
 };
-
-alert(splitSentence(modifiedSentence));
 
 //this is first attempt*
 //var sentenceLength = sentence.length;
